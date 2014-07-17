@@ -7,6 +7,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WealthHealth", "WealthHealt
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WealthHealth.Test", "WealthHealth.Test\WealthHealth.Test.csproj", "{83C18713-4F20-46E6-9562-7E283360BF8D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WealthHealth.Model", "WealthHealth.Model\WealthHealth.Model.csproj", "{3B6FC919-E82A-4FE2-AD61-C19C910775DC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WealthHealth.Data", "WealthHealth.Data\WealthHealth.Data.csproj", "{EDC9BA08-3070-4D75-A61E-29E453F8C560}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +25,14 @@ Global
 		{83C18713-4F20-46E6-9562-7E283360BF8D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{83C18713-4F20-46E6-9562-7E283360BF8D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{83C18713-4F20-46E6-9562-7E283360BF8D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3B6FC919-E82A-4FE2-AD61-C19C910775DC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3B6FC919-E82A-4FE2-AD61-C19C910775DC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3B6FC919-E82A-4FE2-AD61-C19C910775DC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3B6FC919-E82A-4FE2-AD61-C19C910775DC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EDC9BA08-3070-4D75-A61E-29E453F8C560}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EDC9BA08-3070-4D75-A61E-29E453F8C560}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EDC9BA08-3070-4D75-A61E-29E453F8C560}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EDC9BA08-3070-4D75-A61E-29E453F8C560}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

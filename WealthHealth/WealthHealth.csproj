@@ -193,7 +193,6 @@
     <Compile Include="Areas\HelpPage\SampleGeneration\TextSample.cs" />
     <Compile Include="Areas\HelpPage\XmlDocumentationProvider.cs" />
     <Compile Include="Controllers\HomeController.cs" />
-    <Compile Include="Controllers\ValuesController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -331,7 +330,16 @@
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Scripts\jquery-2.1.1.min.map" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\WealthHealth.Data\WealthHealth.Data.csproj">
+      <Project>{edc9ba08-3070-4d75-a61e-29e453f8c560}</Project>
+      <Name>WealthHealth.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\WealthHealth.Model\WealthHealth.Model.csproj">
+      <Project>{3b6fc919-e82a-4fe2-ad61-c19c910775dc}</Project>
+      <Name>WealthHealth.Model</Name>
+    </ProjectReference>
+  </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config">
       <SubType>Designer</SubType>
