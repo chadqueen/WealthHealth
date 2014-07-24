@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.Mvc;
+﻿using System.Web.Mvc;
 using System.Web.Routing;
 
 namespace WealthHealth
@@ -12,6 +8,13 @@ namespace WealthHealth
         public static void RegisterRoutes(RouteCollection routes)
         {
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
+
+            // Set route for WealthHealth Angular App
+            routes.MapRoute(
+                name: "WealthHealthAngularApp",
+                url: "wealthhealth/{*pathInfo}",
+                defaults: new { controller = "WealthHealth", action = "Index" }
+            );
 
             routes.MapRoute(
                 name: "Default",

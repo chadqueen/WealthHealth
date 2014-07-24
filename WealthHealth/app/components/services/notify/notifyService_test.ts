@@ -1,10 +1,11 @@
-﻿/// <reference path="../../../../scripts/typings/jasmine/jasmine.d.ts" />
+﻿
+/// <reference path="../../../../scripts/typings/jasmine/jasmine.d.ts" />
 
 describe('Notify', () => {
 
     var toastrMock;
 
-    var injectedNotifier: Notify.Notify;
+    var injectedNotifier: Notify.NotifyService;
 
     beforeEach(angular.mock.module(Notify.moduleName));
     
@@ -33,7 +34,7 @@ describe('Notify', () => {
         });
     });
 
-    beforeEach(inject((notify: Notify.Notify) => {
+    beforeEach(inject((notify: Notify.NotifyService) => {
         injectedNotifier = notify;
     }));
 

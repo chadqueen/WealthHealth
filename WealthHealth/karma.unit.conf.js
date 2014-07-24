@@ -16,6 +16,7 @@ module.exports = function (config) {
             // Required vendor libraries/frameworks
             'Scripts/jquery-2*.min.js', // needs to be before angular so elements use full jQuery
             'Scripts/angular.js',
+            'Scripts/angular-route.js',
             'Scripts/angular-loader.js',
             'Scripts/angular-mocks.js',
             'Scripts/underscore.js',
@@ -23,7 +24,12 @@ module.exports = function (config) {
             // Notify Module
             'app/components/services/notify/notify.js',
             'app/components/services/notify/notifyService.js',
-            'app/components/services/notify/notifyService_test.js'
+            'app/components/services/notify/notifyService_test.js',
+
+            // Route Resolver Module
+            'app/components/providers/routeResolver/routeResolver.js',
+            'app/components/providers/routeResolver/routeResolverProvider.js',
+            'app/components/providers/routeResolver/routeResolverProvider_test.js'
         ],
 
         preprocessors: {

@@ -1,4 +1,5 @@
-﻿/* tslint:disable:interface-name */
+﻿
+/* tslint:disable:interface-name */
 interface Window { toastr: Toastr; }
 /* tslint:enable */
 
@@ -9,8 +10,8 @@ module Notify {
 
     export var instance =
         angular.module(
-            moduleName,
+            Notify.moduleName,
             []
-            )
-            .value('toastr', window.toastr);
-} 
+        )
+        .value('toastr', window.toastr);
+}

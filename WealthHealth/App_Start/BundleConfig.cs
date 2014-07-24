@@ -42,14 +42,52 @@ namespace WealthHealth
             modernizrBundle.Orderer = nullOrderer;
             bundles.Add(modernizrBundle);
 
+            // 3rd Party JavaScript files
             var vendorBundle = new Bundle("~/bundles/js/vendor")
                 .Include(
+                    "~/Scripts/angular.js",
+                    "~/Scripts/angular-route.js",
+                    "~/Scripts/angular-animate.js",
                     "~/Scripts/bootstrap.js",
-                    "~/Scripts/respond.js");
+                    "~/Scripts/respond.js",
+                    "~/Scripts/toastr.min.js",
+                    "~/Scripts/underscore.js");
             vendorBundle.Builder = nullBuilder;
             vendorBundle.Transforms.Add(scriptTransformer);
             vendorBundle.Orderer = nullOrderer;
             bundles.Add(vendorBundle);
+
+            // WealthHealth Angular App
+            var wealthHealthAppBundle = new Bundle("~/bundles/js/wealthhealth")
+                // Notify Component
+                .Include(
+                    "~/app/components/services/notify/notify.js",
+                    "~/app/components/services/notify/notifyService.js")
+
+                // Route Resolver
+                .Include(
+                    "~/app/components/providers/routeResolver/routeResolver.js",
+                    "~/app/components/providers/routeResolver/routeResolverProvider.js")
+
+                // Authentication
+                .Include("~/app/authentication/authentication.js")
+                .IncludeDirectory("~/app/authentication/controllers", "*Ctrl.js", true)
+                .Include("~/app/authentication/authenticationRoutes.js")
+
+                // Core
+                .Include("~/app/WealthHealth.js")
+
+                // Sections
+                .IncludeDirectory("~/app/sections", "*Ctrl.js", true)
+
+                // Config
+                .Include("~/app/config/wealthHealthRoutes.js");
+
+                
+            wealthHealthAppBundle.Builder = nullBuilder;
+            wealthHealthAppBundle.Transforms.Add(scriptTransformer);
+            wealthHealthAppBundle.Orderer = nullOrderer;
+            bundles.Add(wealthHealthAppBundle);
         }
 
         private static void RegisterCss(BundleCollection bundles)

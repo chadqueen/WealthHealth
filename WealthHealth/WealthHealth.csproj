@@ -206,12 +206,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="app\authentication\controllers\" />
-    <Folder Include="app\authentication\templates\" />
     <Folder Include="app\components\directives\" />
     <Folder Include="app\components\filters\" />
-    <Folder Include="app\sections\dashboard\controllers\" />
-    <Folder Include="app\sections\dashboard\templates\" />
     <Folder Include="App_Data\" />
   </ItemGroup>
   <ItemGroup>
@@ -252,6 +248,7 @@
     <Compile Include="Controllers\Api\BaseApiController.cs" />
     <Compile Include="Controllers\Api\UserAccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\WealthHealthController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -264,6 +261,8 @@
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="app\authentication\templates\register.html" />
+    <Content Include="app\sections\dashboard\templates\dashboard.html" />
     <Content Include="karma.unit.conf.js" />
     <Content Include="Areas\HelpPage\HelpPage.css" />
     <Content Include="ClearScript.V8\ClearScriptV8-32.dll" />
@@ -430,6 +429,8 @@
     <Content Include="Scripts\jquery-2.1.1.min.map" />
     <Content Include="Scripts\toastr.min.js.map" />
     <Content Include="Scripts\underscore-min.map" />
+    <Content Include="Views\WealthHealth\Index.cshtml" />
+    <Content Include="Views\Shared\_AngularAppLayout.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\WealthHealth.Data.Contracts\WealthHealth.Data.Contracts.csproj">
@@ -452,9 +453,18 @@
     <None Include="Project_Readme.html" />
   </ItemGroup>
   <ItemGroup>
+    <TypeScriptCompile Include="app\authentication\authentication.ts" />
+    <TypeScriptCompile Include="app\authentication\authenticationRoutes.ts" />
+    <TypeScriptCompile Include="app\authentication\controllers\registerCtrl.ts" />
+    <TypeScriptCompile Include="app\components\providers\routeResolver\routeResolver.ts" />
+    <TypeScriptCompile Include="app\components\providers\routeResolver\routeResolverProvider.ts" />
+    <TypeScriptCompile Include="app\components\providers\routeResolver\routeResolverProvider_test.ts" />
     <TypeScriptCompile Include="app\components\services\notify\notify.ts" />
     <TypeScriptCompile Include="app\components\services\notify\notifyService.ts" />
     <TypeScriptCompile Include="app\components\services\notify\notifyService_test.ts" />
+    <TypeScriptCompile Include="app\config\wealthHealthRoutes.ts" />
+    <TypeScriptCompile Include="app\sections\dashboard\controllers\dashboardCtrl.ts" />
+    <TypeScriptCompile Include="app\WealthHealth.ts" />
     <TypeScriptCompile Include="Scripts\typings\angularjs\angular-animate.d.ts" />
     <TypeScriptCompile Include="Scripts\typings\angularjs\angular-cookies.d.ts" />
     <TypeScriptCompile Include="Scripts\typings\angularjs\angular-mocks.d.ts" />

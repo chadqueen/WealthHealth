@@ -1,7 +1,8 @@
-﻿module Notify {
+﻿
+module Notify {
     'use strict';
 
-    export class Notify {
+    export class NotifyService {
 
         private toastsByGroup: { [group: string]: JQuery[] } = {};
 
@@ -61,4 +62,4 @@
     }
 }
 
-Notify.instance.service('notify', ['toastr', Notify.Notify]); 
+Notify.instance.service('notify', ['toastr', Notify.NotifyService]);
