@@ -25,7 +25,7 @@ namespace WealthHealth.Controllers.Api
 
             IdentityResult result = await dbUow.ApplicationUsers
                 .RegisterUser(
-                    registerBindingModel.UserName, 
+                    registerBindingModel.Email, 
                     registerBindingModel.Email,
                     registerBindingModel.Password);
 
